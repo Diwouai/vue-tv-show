@@ -1,13 +1,11 @@
 <template>
   <div class="flex flex-wrap -mx-1 lg:-mx-4">
-    <!-- Column -->
     <div
-      class="my-1 px-1 w-full md:w-1/3 lg:my-4 lg:px-4 lg:w-1/5"
-      v-for="movie in tv_shows"
-      :key="movie.id"
+      class="my-1 px-1 w-full md:w-1/3 lg:my-4 lg:px-4 lg:w-1/4"
+      v-for="tv in tv_shows"
+      :key="tv.id"
     >
-      <!-- Article -->
-      <article class="overflow-hidden rounded-lg shadow-lg dark:bg-gray-600">
+      <section class="overflow-hidden rounded-lg shadow-lg dark:bg-gray-600">
         <!-- <router-link :to="`/movie/${movie.id}`">
           <img
             class="block h-auto w-full"
@@ -17,8 +15,8 @@
         </router-link> -->
         <img
           class="block h-auto w-full"
-          :src="IMG_URL + movie.poster_path"
-          :alt="movie.title"
+          :src="IMG_URL + tv.poster_path"
+          :alt="tv.name"
         />
 
         <header
@@ -31,20 +29,18 @@
               style="text-decoration: none"
               >{{ movie.title }}</router-link
             > -->
-            {{ movie.name }}
+            {{ tv.name }}
           </h2>
         </header>
         <header
           class="flex items-center justify-between leading-tight p-2 md:p-4"
         >
           <p class="text-black dark:text-white">
-            {{ formatDate(movie.first_air_date) }}
+            {{ formatDate(tv.first_air_date) }}
           </p>
         </header>
-      </article>
-      <!-- END Article -->
+      </section>
     </div>
-    <!-- END Column -->
   </div>
 </template>
 

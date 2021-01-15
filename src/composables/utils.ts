@@ -1,7 +1,7 @@
 export default function useUtils() {
   function formatDate(date: Date) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(date).toLocaleDateString('fr', options);
+    return new Date(date).toLocaleDateString('en', options);
   }
 
   function timeConvert(n: number) {
