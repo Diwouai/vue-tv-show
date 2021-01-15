@@ -1,0 +1,20 @@
+export default function useUtils() {
+  function formatDate(date: Date) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(date).toLocaleDateString('fr', options);
+  }
+
+  function timeConvert(n: number) {
+    let num = n;
+    let hours = num / 60;
+    let rhours = Math.floor(hours);
+    let minutes = (hours - rhours) * 60;
+    let rminutes = Math.round(minutes);
+    return rhours + 'h' + rminutes;
+  }
+
+  return {
+    formatDate,
+    timeConvert,
+  };
+}

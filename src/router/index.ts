@@ -7,11 +7,11 @@ interface RoutesType {
   component: () => {};
 }
 
-const routes: RoutesType[] = [
+const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue'),
+    component: Home,
   },
 ];
 
