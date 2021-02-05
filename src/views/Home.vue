@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <Tv />
+    <Popular />
   </div>
 </template>
 
 <script lang="ts">
-import Tv from '../components/Tv.vue';
+import Popular from '../components/Popular.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    Tv
+    Popular
   }
 });
 </script>
