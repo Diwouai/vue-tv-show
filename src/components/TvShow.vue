@@ -44,7 +44,7 @@
     <div class="flex items-center justify-center w-full px-8">
       <button
         class="font-bold-body-weight focus:outline-none border-2 border-transparent transition-colors duration-200 group w-auto sm:w-1/3 flex items-center justify-center h-10 text-base rounded-lg px-4 bg-black text-white hover:text-gray-300 text-dark focus:border-grey-700 dark:bg-white dark:text-black transform hover:scale-110 motion-reduce:transform-none"
-        @click="fetchTvShow('popular', 'LOAD_MORE')"
+        @click="fetchTvShow(categoryName, 'LOAD_MORE')"
       >
         <div
           class="transition duration-200 transform ease-in-out opacity-100 scale-100"
@@ -62,18 +62,23 @@ import useUtils from '../composables/utils';
 import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
-  name: 'Popular',
-  setup() {
+  name: 'TvShow',
+  props: {
+    category: String,
+  },
+  setup(props) {
     const { tv_shows, fetchTvShow, IMG_URL } = useTvShow();
     const { formatDate } = useUtils();
+    const categoryName = props.category || '';
 
-    onMounted(() => fetchTvShow('popular'));
+    onMounted(() => fetchTvShow(categoryName));
 
     return {
       tv_shows,
       IMG_URL,
       formatDate,
       fetchTvShow,
+      categoryName,
     };
   },
 });

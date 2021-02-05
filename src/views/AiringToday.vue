@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <TvShow category="popular" />
+    <TvShow category="airing_today" />
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import TvShow from '../components/TvShow.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Home',
+  name: 'AiringToday',
   components: {
     TvShow,
   },

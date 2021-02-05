@@ -1,10 +1,10 @@
 export default function useUtils() {
-  function formatDate(date: Date) {
+  const formatDate = (date: Date) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(date).toLocaleDateString('en', options);
   }
 
-  function timeConvert(n: number) {
+  const timeConvert = (n: number) => {
     let num = n;
     let hours = num / 60;
     let rhours = Math.floor(hours);
