@@ -3,7 +3,7 @@
     <nav class="flex items-center justify-between flex-wrap bg-black p-6">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <svg
-          class="fill-current h-8 w-8 mr-2"
+          class="fill-current h-8 w-8 mr-2 text-white"
           width="54"
           height="54"
           viewBox="0 0 54 54"
@@ -52,6 +52,40 @@
             >Upcoming
           </router-link> -->
         </div>
+        <div class="text-sm lg:flex-grow text-right text-white">
+          <button @click="toggleDark">
+            <div v-if="!isDark">
+              <svg
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+            </div>
+            <div v-else>
+              <svg
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </nav>
   </div>
@@ -59,14 +93,24 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useDark, useToggle } from '@vueuse/core';
 
 export default defineComponent({
   name: 'Header',
-  methods: {
-    toogle_menu(): void {
+  setup() {
+    const toogle_menu = () => {
       const nav = <HTMLElement>document.getElementById('nav-content');
       nav.classList.toggle('hidden');
-    },
+    };
+
+    const isDark = useDark();
+    const toggleDark = useToggle(isDark);
+
+    return {
+      toogle_menu,
+      toggleDark,
+      isDark
+    };
   },
 });
 </script>
