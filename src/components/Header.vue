@@ -109,7 +109,7 @@ export default defineComponent({
     return {
       toogle_menu,
       toggleDark,
-      isDark
+      isDark,
     };
   },
 });
