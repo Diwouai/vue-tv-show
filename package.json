@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@types/node": "^14.14.21",
-    "@vueuse/core": "^4.0.12",
+    "@vueuse/core": "^4.1.0",
     "axios": "^0.21.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.3"

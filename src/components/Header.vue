@@ -54,7 +54,7 @@
         </div>
         <div class="text-sm lg:flex-grow text-right text-white">
           <button @click="toggleDark">
-            <div v-if="!isDark">
+            <div v-if="isDark">
               <svg
                 fill="none"
                 stroke-linecap="round"
