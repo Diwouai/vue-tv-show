@@ -106,6 +106,9 @@ export default defineComponent({
     const isDark = useDark();
     const toggleDark = useToggle(isDark);
 
+    console.log('isDark : ' + isDark);
+    console.log('toogleDark : ' + toggleDark);
+
     return {
       toogle_menu,
       toggleDark,
