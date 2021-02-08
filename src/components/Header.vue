@@ -51,6 +51,18 @@
             style="text-decoration: none"
             >Airing Today
           </router-link>
+          <router-link
+            class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-green-100 mr-4"
+            to="/on-the-air"
+            style="text-decoration: none"
+            >On The Air
+          </router-link>
+          <router-link
+            class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-green-100 mr-4"
+            to="/top-rated"
+            style="text-decoration: none"
+            >Top Rated
+          </router-link>
         </div>
         <div class="text-sm lg:flex-grow text-right text-white">
           <button @click="toggleDark">
