@@ -48,8 +48,15 @@
       >
         <div
           class="transition duration-200 transform ease-in-out opacity-100 scale-100"
+          v-if="loading === false"
         >
           Load More
+        </div>
+        <div
+          class="transition duration-200 transform ease-in-out opacity-100 scale-100 animate-spin"
+          v-else
+        >
+          Loading
         </div>
       </button>
     </div>
@@ -67,7 +74,7 @@ export default defineComponent({
     category: String,
   },
   setup(props) {
-    const { tv_shows, fetchTvShow, IMG_URL } = useTvShow();
+    const { tv_shows, fetchTvShow, IMG_URL, loading } = useTvShow();
     const { formatDate } = useUtils();
     const categoryName = props.category || '';
 
@@ -79,6 +86,7 @@ export default defineComponent({
       formatDate,
       fetchTvShow,
       categoryName,
+      loading,
     };
   },
 });
