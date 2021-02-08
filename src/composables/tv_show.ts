@@ -8,7 +8,7 @@ export default function useTvShow() {
 
   const IMG_URL = 'https://image.tmdb.org/t/p/w370_and_h556_bestv2/';
 
-  const fetchTvShow = (category: String, initial: string = 'INITIAL') => {
+  const fetchTvShow = (category: string, initial: string = 'INITIAL') => {
     if (initial === 'LOAD_MORE') {
       currentPage.value++;
     }

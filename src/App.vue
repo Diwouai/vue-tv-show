@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-white dark:bg-gray-900">
+  <div class="flex flex-col min-h-screen bg-white dark:bg-dark">
     <Header />
     <div class="container my-12 mx-auto px-4 md:px-12">
       <router-view :key="$route.fullPath" />
