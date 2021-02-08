@@ -25,7 +25,7 @@
           @click="toogle_menu"
         >
           <svg
-            class="fill-current h-3 w-3 text-black dark:text-white"
+            class="fill-current h-3 w-3 text-white"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
