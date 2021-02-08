@@ -65,8 +65,8 @@
           </router-link>
         </div>
         <div class="text-sm lg:flex-grow text-right text-white">
-          <button @click="toggleDark">
-            <div v-if="isDark">
+          <button @click="dark = !dark">
+            <div v-if="dark">
               <svg
                 fill="none"
                 stroke-linecap="round"
@@ -105,7 +105,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useDark, useToggle } from '@vueuse/core';
+import { isDark } from '../logics';
 
 export default defineComponent({
   name: 'Header',
@@ -115,15 +115,11 @@ export default defineComponent({
       nav.classList.toggle('hidden');
     };
 
-    const isDark = useDark();
-    const toggleDark = useToggle(isDark);
-
-    console.log(isDark);
+    const dark = isDark;
 
     return {
       toogle_menu,
-      toggleDark,
-      isDark,
+      dark,
     };
   },
 });
