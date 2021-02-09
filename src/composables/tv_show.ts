@@ -15,8 +15,6 @@ export default function useTvShow() {
     AXIOS_API.get(`tv/${category}?api_key=${API_KEY}&page=${currentPage.value}`)
       .then((response) => {
         tv_shows.value = [...tv_shows.value, ...response.data.results];
-        console.log('Category : ' + category);
-        console.log(currentPage.value);
       })
       .catch((error) => {
         console.log(error);
