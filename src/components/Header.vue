@@ -64,7 +64,7 @@
             >Top Rated
           </router-link>
         </div>
-        <div class="text-sm lg:flex-grow text-right text-white">
+        <div class="text-sm lg:flex-grow text-right text-white hover:text-indigo-300">
           <button @click="dark = !dark">
             <div v-if="dark">
               <svg

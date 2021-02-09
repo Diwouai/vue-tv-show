@@ -5,6 +5,7 @@ export default function useTvShow() {
   let tv_shows = ref<any[]>([]);
   let currentPage = ref(1);
   let loading = ref(true);
+  let show_detail = ref([]);
 
   const IMG_URL = 'https://image.tmdb.org/t/p/w370_and_h556_bestv2/';
 
@@ -24,10 +25,22 @@ export default function useTvShow() {
       });
   };
 
+  const fetchShowDetail = (showID: number) => {
+    AXIOS_API.get(`tv/${showID}?api_key=${API_KEY}&language=en-US`)
+      .then((response) => {
+        show_detail.value = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return {
     IMG_URL,
     tv_shows,
     fetchTvShow,
     loading,
+    show_detail,
+    fetchShowDetail,
   };
 }
