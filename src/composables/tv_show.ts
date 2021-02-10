@@ -9,8 +9,8 @@ export default function useTvShow() {
 
   const IMG_URL = 'https://image.tmdb.org/t/p/w370_and_h556_bestv2/';
 
-  const fetchTvShow = (category: string, initial: string = 'INITIAL') => {
-    if (initial === 'LOAD_MORE') {
+  const fetchTvShow = (category: string, datas: string = 'INITIAL') => {
+    if (datas === 'LOAD_MORE') {
       currentPage.value++;
     }
     AXIOS_API.get(`tv/${category}?api_key=${API_KEY}&page=${currentPage.value}`)
