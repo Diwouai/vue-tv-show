@@ -19,7 +19,7 @@
           :alt="tv.name"
         />
 
-        <header
+        <article
           class="flex items-center justify-between leading-tight p-2 md:p-4"
         >
           <h2 class="text-base font-bold text-black dark:text-white">
@@ -31,14 +31,14 @@
             > -->
             {{ tv.name }}
           </h2>
-        </header>
-        <header
+        </article>
+        <article
           class="flex items-center justify-between leading-tight p-2 md:p-4"
         >
           <p class="text-black dark:text-white">
             {{ formatDate(tv.first_air_date) }}
           </p>
-        </header>
+        </article>
       </section>
     </div>
     <div class="flex items-center justify-center w-full px-8">
