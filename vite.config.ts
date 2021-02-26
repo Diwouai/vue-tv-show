@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
-      inlineRegister: false,
       manifest: {
         name: 'Vue TV Show',
         short_name: 'Vue TV Show',
