@@ -8,6 +8,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "incremental": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client", "node"],

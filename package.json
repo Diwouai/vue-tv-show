@@ -1,6 +1,6 @@
 {
   "name": "vue-tv-show",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "dev": "vite",
     "build": "vuedx-typecheck . && vite build"
@@ -9,6 +9,7 @@
     "@types/node": "^14.14.21",
     "@vueuse/core": "^4.3.4",
     "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
     "vue": "^3.0.6",
     "vue-router": "^4.0.4"
   },

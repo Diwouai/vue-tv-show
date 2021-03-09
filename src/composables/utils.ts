@@ -1,7 +1,8 @@
+import dayjs from 'dayjs';
+
 export default function useUtils() {
   const formatDate = (date: Date) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(date).toLocaleDateString('en', options);
+    return dayjs(date).format('MMMM DD, YYYY');
   };
 
   const timeConvert = (n: number): string => {
