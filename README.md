@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fcb2aace-eece-4b29-a562-2bea5293d375/deploy-status)](https://app.netlify.com/sites/practical-darwin-4b1347/deploys)
 
-Demo TV Show App
+Demo TV Show App usign Vue 3 and ViteJS
 
 ## Build Setup
 
